@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "module": "esnext",
+    "target": "es2020" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */,
+    "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
     "lib": ["dom", "esnext"],
     "moduleResolution": "node",
     "jsx": "react",
     "sourceMap": true,
     "declaration": true,
+    "declarationMap": true /* Generates a sourcemap for each corresponding '.d.ts' file. */,
     "esModuleInterop": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -15,8 +17,9 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true /* Skip type checking of declaration files. */
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "example"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "example", "src/**/*.test.ts*"]
 }
