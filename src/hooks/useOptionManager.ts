@@ -13,7 +13,7 @@ interface Updater<T> {
 
 const useOptionManager = <T extends string>(
   initialValues: T[],
-  options: Options
+  options?: Options
 ): [T[], T[], Updater<T>] => {
   const { delayMs = 1000 } = { ...(options || {}) };
 
